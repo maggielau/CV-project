@@ -1,3 +1,18 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+
 :root {
     --mainColour: rgb(0, 36, 104);
     --accent1: rgb(28, 80, 179);
@@ -182,4 +197,27 @@ button:hover {opacity: 1}
 .demoButton {
     background-color: rgb(134, 134, 134);
     color: #FFF;
+}
+
+@media print {
+    #InputContainer {
+        display: none !important;
+    }
+
+    #container {
+        display: contents;
+    }
+
+    #preview {
+        box-shadow: none;
+        zoom: 150%;
+        margin: 0 20px;
+        padding: 0;
+    }
+
+	@page { 
+		margin-top: 0.3in; 
+		margin-bottom: 0.3in; 
+	} 
+
 }

@@ -27,6 +27,7 @@ class Input extends React.Component {
         this.renderWork = this.renderWork.bind(this);
         this.addWork = this.addWork.bind(this);
         this.delWork = this.delWork.bind(this);
+        this.printPDF = this.printPDF.bind(this);
 
 
     }
@@ -219,6 +220,11 @@ class Input extends React.Component {
         this.setState({work: newWorkList});
     }
 
+    printPDF() {
+        window.focus();
+        window.print()
+        return true;
+    }
 
 
 
@@ -229,6 +235,7 @@ class Input extends React.Component {
                     <h1>Welcome!</h1>
                     <p>Please input your information below to build your resume.</p>
                     <button id="demo" onClick={this.fillDemo} className="demoButton">Demo</button>
+                    <button id="print" onClick={this.printPDF} className="demoButton">Print to PDF</button>
                     <div className="themeInput">
                         <h2>Theme</h2>
                         <label htmlFor="theme">Select your resume theme colours:</label>
